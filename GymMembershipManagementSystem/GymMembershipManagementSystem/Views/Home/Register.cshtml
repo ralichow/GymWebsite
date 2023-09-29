@@ -1,0 +1,60 @@
+﻿@model GymMembershipManagementSystem.Models.User
+@{
+    ViewBag.Title = "Register";
+}
+
+<style>
+    body {
+        /* Linear gradient from top (red) to bottom (blue) */
+        background: linear-gradient(to bottom, #bcdaea, #15f5e6);
+        /* Additional CSS properties for styling */
+        width: 100%;
+        height: 100%;
+        /* Other styles as needed */
+    }
+
+    .form-group {
+        padding-left: 550px;
+    }
+</style>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<div class="card custom-card">
+    <div class="card-header bg-primary text-white">
+        <h3>Register Form</h3>
+    </div>
+    <div class="card-body">
+        <div class="form-group">
+            @Html.LabelFor(m => m.UserName)
+            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.UserName)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password)
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Password)
+        </div>
+       
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.IsStaff)
+            @Html.EditorFor(m => m.IsStaff)
+            @Html.ValidationMessageFor(m => m.IsStaff)
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary rounded-0">Register</button>
+                @Html.ActionLink("Login here", "Login")
+            </div>
+
+        </div>
+  </div>
+}
+
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div>
+            <p>@ViewData.ModelState[""]</p>
+        </div>
+    }

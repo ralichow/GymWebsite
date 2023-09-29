@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title ETERNAL GYM</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+        /* CSS for organizing footer into three columns */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            align-items: center; /* Center-align content in the middle column */
+        }
+
+        .footer-logo img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            text-align: center; /* Center-align links */
+        }
+
+        .footer-links ul li {
+                margin-bottom: 10px;
+        }
+
+       .footer-links ul li a {
+                    color: #fff; /* Link text color */
+                    text-decoration: none;
+       }
+
+       .footer-links ul li a:hover {
+                        text-decoration: underline; /* Underline on hover */
+       }
+
+
+
+        .footer-info {
+            flex: 1;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+
+            <a class="navbar-brand" href="#">ETERNAL GYM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <!-- Center-align links -->
+                    @if (User.Identity.IsAuthenticated && User.IsInRole("Staff"))
+                    {
+                        <li class="nav-item">
+                            @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("User Management", "Index", "User", null, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Role Management", "Index", "UserRole", null, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Class Management", "Index", "ClassSchedule", null, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Membership Management", "Index", "StaffMembershipRegistration", null, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Report", "Index", "Report", null, new { @class = "nav-link" })
+                        </li>
+
+                    }
+                    else if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item">
+                            @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Membership Management", "Index", "MembershipRegistration", null, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Class Management", "Index", "ClassEnrollment", null, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Update Info", "Edit", "User", null, new { @class = "nav-link" })
+                        </li>
+
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            @Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("About", "About", "Home", null, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Gym Class", "Class", "Home", null, new { @class = "nav-link" })
+                        </li>
+                    }
+                </ul>
+                <ul class="navbar-nav">
+                    <!-- Right-aligned links -->
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item">
+                            @Html.ActionLink("Hello, " + @User.Identity.Name, "", "", new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Logout", "Logout", "Home", new { @class = "nav-link" })
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            @Html.ActionLink("Login", "Login", "Home", new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("New User", "Register", "Home", new { @class = "nav-link" })
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../Content/IMG/logo.png" alt="Your System Logo">
+            </div>
+        </div>
+        <div class="footer-content">
+                <div class="footer-links">
+                    <ul>
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About Us", "About", "Home")</li>
+                        <li>@Html.ActionLink("Membership", "Membership", "Home")</li>
+                        <li>@Html.ActionLink("Classes", "Classes", "Home")</li>
+                        <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                    </ul>
+                </div>
+        </div>
+        <div class="footer-info">
+                <h4>Business Hours</h4>
+                <p>Monday - Friday: 9:00 AM - 7:00 PM</p>
+                <p>Saturday: 10:00 AM - 4:00 PM</p>
+                <p>Sunday: Closed</p>
+        </div>
+        <div class="footer-info">
+            <p>&copy; @DateTime.Now.Year - Business Name</p>
+                <p>123 XXXXXX, XXXX, NSW XXXX</p>
+                <p>Email: info@business.com</p>
+                <p>Phone: (123) 456-7890</p>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

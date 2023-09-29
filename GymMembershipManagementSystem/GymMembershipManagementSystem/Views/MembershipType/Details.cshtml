@@ -1,0 +1,50 @@
+﻿@model GymMembershipManagementSystem.Models.MembershipType
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MembershipType</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MembershipName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MembershipName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MembershipDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MembershipDuration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MembershipDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MembershipDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fee)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MembershipId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

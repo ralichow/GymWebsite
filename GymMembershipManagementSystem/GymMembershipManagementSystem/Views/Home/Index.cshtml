@@ -1,0 +1,181 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Website</title>
+    <style>
+        /* Reset some default styles */
+
+
+        body, h1, p, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Define some basic styles for the page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Style the navigation bar */
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+            nav ul {
+                list-style-type: none;
+                text-align: center;
+            }
+
+            nav li {
+                display: inline;
+                margin-right: 20px;
+            }
+
+        /* Style the header image */
+        header {
+            text-align: center;
+            height: 50vh; /* Half the viewport height */
+            overflow: hidden; /* Hide overflow content */
+        }
+
+            header img {
+                width: 100%;
+                height: auto;
+                position: relative;
+                top: 50%; /* Move the image down by 50% of its own height */
+                transform: translateY(-50%); /* Center vertically */
+            }
+
+        /* Style the company description section */
+        .company-description {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Style the classes section */
+        .row {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+            .row h2 {
+                font-size: 24px;
+            }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 2px solid #000; /* Border style and color */
+        }
+
+        th, td {
+            border: 1px solid #000; /* Border style and color for cells */
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2; /* Header background color */
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="../Content/IMG/gym.jpg" alt="Gym Image">
+    </header>
+
+    <div class="company-description">
+        <h1>Welcome to the ETERNAL Gym</h1>
+        <p>We are a premier fitness center dedicated to helping you achieve your fitness goals.</p>
+    </div>
+
+    <div class="row">
+        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
+            <h2 id="gettingStartedTitle">MMA</h2>
+            <p>
+                OUR GYM provides the best classes possible with energetic and kind teahcers who have partcipated in the repspective courses at the national levels; and are also
+                highly knwledgable about the working of the boduy mechanics and how to build a healthy body.
+            </p>
+            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        </section>
+        <section class="col-md-4" aria-labelledby="librariesTitle">
+            <h2 id="librariesTitle">KARATE</h2>
+            <p>
+                OUR GYM provides the best classes possible with energetic and kind teahcers who have partcipated in the repspective courses at the national levels; and are also
+                highly knwledgable about the working of the boduy mechanics and how to build a healthy body.
+            </p>
+            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        </section>
+        <section class="col-md-4" aria-labelledby="hostingTitle">
+            <h2 id="hostingTitle">BOXING</h2>
+            <p>
+                OUR GYM provides the best classes possible with energetic and kind teahcers who have partcipated in the repspective courses at the national levels; and are also
+                highly knwledgable about the working of the boduy mechanics and how to build a healthy body.
+            </p>
+            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        </section>
+    </div>
+    <div class="row">
+
+    </div>
+
+
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>12100668</td>
+                    <td>Amit Bhetuwal</td>
+                </tr>
+                <tr>
+                    <td>12201257</td>
+                    <td>Rafi Ali Chowdhury</td>
+                </tr>
+                <tr>
+                    <td>12200575</td>
+                    <td>Ahn Phong Vu</td>
+                </tr>
+                <tr>
+                    <td>20022837</td>
+                    <td>Sanjog Tamang</td>
+                </tr>
+                <!-- Add more rows for additional students -->
+            </tbody>
+        </table>
+
+
+
+
+</body>
+</html>

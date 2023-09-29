@@ -1,0 +1,40 @@
+﻿@model IEnumerable<GymMembershipManagementSystem.Models.MembershipTypeSummaryViewModel>
+
+@{
+    ViewBag.Title = "Membership Type Summary Report";
+}
+
+<h2>Membership Type Summary Report</h2>
+
+<style>
+    body {
+        /* Linear gradient from top (red) to bottom (blue) */
+        background: linear-gradient(to bottom, #bcdaea, #15f5e6);
+        /* Additional CSS properties for styling */
+        width: 100%;
+        height: 100%;
+        /* Other styles as needed */
+    }
+
+    .form-group {
+        padding-left: 550px;
+    }
+</style>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Membership Type</th>
+            <th>Member Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MembershipTypeName</td>
+                <td>@item.MemberCount</td>
+            </tr>
+        }
+    </tbody>
+</table>

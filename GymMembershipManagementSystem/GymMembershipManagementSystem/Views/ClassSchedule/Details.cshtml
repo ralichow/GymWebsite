@@ -1,0 +1,66 @@
+﻿@model GymMembershipManagementSystem.Models.ClassSchedule
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ClassSchedule</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassSession.ClassName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClassSession.ClassName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserRole.UserRoleID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserRole.UserRoleID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClassDuration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Capacity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Capacity)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ScheduleID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

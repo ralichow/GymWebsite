@@ -1,0 +1,113 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Gym Website</title>
+    <style>
+
+        body {
+            /* Linear gradient from top (red) to bottom (blue) */
+            background: linear-gradient(to bottom, #bcdaea, #15f5e6);
+            /* Additional CSS properties for styling */
+            width: 100%;
+            height: 100%;
+            /* Other styles as needed */
+        }
+
+        /* Add your CSS styles for the Contact page here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        /* Style the main content container */
+        .content {
+            background: linear-gradient(to bottom, #bcdaea, #15f5e6);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center horizontally */
+        }
+
+        /* Style the header */
+        h1 {
+            font-size: 28px;
+        }
+
+        /* Style the contact information */
+        .contact-info {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        /* Style the contact form */
+        .contact-form {
+            margin-top: 20px;
+        }
+
+            .contact-form label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+
+            .contact-form input[type="text"],
+            .contact-form input[type="email"],
+            .contact-form textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            .contact-form textarea {
+                height: 150px;
+            }
+
+            .contact-form button {
+                background-color: #333;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Contact Us</h1>
+        <div class="contact-info">
+            <p>If you have any questions or need assistance, please feel free to contact us:</p>
+            <p><strong>Email:</strong> info@gymwebsite.com</p>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+            <p><strong>Address:</strong> 123 Gym Street, Fitness City, USA</p>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send us a message:</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
