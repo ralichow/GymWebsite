@@ -16,10 +16,10 @@ Class schedule management, including setting limits and tracking attendance.
 
 Specific requirements fulfilled:
 
-Entity-relationship diagram (ERD) designed to represent complex entity relationships.
-Storage of information using MVC forms with appropriate data annotations and input validations.
-Development of an ASP.NET MVC web application.
-Home page displaying group details in a table format.
+*Entity-relationship diagram (ERD) designed to represent complex entity relationships.
+*Storage of information using MVC forms with appropriate data annotations and input validations.
+*Development of an ASP.NET MVC web application.
+*Home page displaying group details in a table format.
 Custom model classes tailored to the ERD.
 Integration of a logo and navigation menu across all pages.
 Custom CSS design for web page aesthetics.
