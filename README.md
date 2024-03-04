@@ -1,28 +1,27 @@
 # GymWebsite
-This is a Gym Website that I built with my group mates for a project in a course.
 
 
+This is a Gym membership management Website that I built with my group mates for a project in a course.
+It showcases the development of a dynamic website using ASP.NET Data Controls. It demonstrates proficiency in designing, testing, and maintaining a dynamic Internet application for business using a comprehensive suite of software tools.
 
-Assessment 3A
-Assessment type: Create MVC web application – Group Assignment (3-4 students per group)
-Assessment purpose: This assessment will allow students to demonstrate that they can develop dynamic
-website using ASP.NET Data Controls. Students are required to develop, test and maintain a dynamic
-Internet application for business using an integrated suite of software tools. This assessment contributes to learning outcomes b, c, and d.
-Value: 35% Due date: Week 12
-Assessment topic: Create an MVC web application
-Task Details: You are appointed as a web developer to develop a system to support managing memberships for a gym. The gym offers several types of memberships, including monthly, quarterly, and yearly, and several types of classes and training sessions. Your task is to design and develop a membership management system that allows members and gym staff to manage memberships and classes.
-The application should enable users, whether members or gym staff, to access the system and manage memberships. Each member or staff can store personal details, including name, contact information, and login credentials. You must implement advanced web security techniques to store passwords.
-The gym staff must be able to create, edit, or delete memberships and the list of classes and training sessions offered. However, members should only be able to see and manage their own memberships and class schedules. The application should create a summary report about the types of memberships and the number of members enrolled in each type.
-The system should allow members to sign up for classes and training sessions, and view their schedule. The gym staff should be able to manage class schedules, set class limits, and track attendance.
-Specific requirements:
-Model Design Requirements:
-• Design your entity-relationship diagram (ERD) for the classes based on your understanding of complex entity relationships, including one-to-one, one-to-many, and many-to-many relationships.
-• The web application should store the information of every class and relationship using forms. For example, the Person class may have properties such as ID, Name, DOB, etc.
-• Use appropriate data annotation and input validations for the HTML elements in the MVC forms. You can either use custom or default error messages.
-Application Requirements:
-• Create an ASP.net MVC web application.
-• The home page must show group details, including student ID and student full names, in a table.
-• Create model classes that are specific to ERD
-• All the pages should have a logo and a navigation menu.
-• Use CSS to use your custom design for the web pages.
-• The web application must be ready to run without any additional configurations.
+As a web developer, I was tasked with creating a system to manage memberships for a gym, encompassing various membership types such as monthly, quarterly, and yearly subscriptions, along with diverse classes and training sessions. The system allows both members and gym staff to efficiently manage memberships and classes. Users can store personal details securely, including name, contact information, and login credentials, with advanced web security techniques implemented for password storage.
+
+Key features include:
+
+Creation, modification, and deletion of memberships and class lists by gym staff.
+Member access restricted to viewing and managing their own memberships and class schedules.
+Generation of summary reports detailing membership types and enrollment statistics.
+Sign-up functionality for classes and training sessions, with members able to view their schedules.
+Class schedule management, including setting limits and tracking attendance.
+
+Specific requirements fulfilled:
+
+Entity-relationship diagram (ERD) designed to represent complex entity relationships.
+Storage of information using MVC forms with appropriate data annotations and input validations.
+Development of an ASP.NET MVC web application.
+Home page displaying group details in a table format.
+Custom model classes tailored to the ERD.
+Integration of a logo and navigation menu across all pages.
+Custom CSS design for web page aesthetics.
+Configuration-free deployment of the web application.
+This project not only showcases technical proficiency but also emphasizes effective design, usability, and security in developing a robust solution for managing gym memberships and classes.
